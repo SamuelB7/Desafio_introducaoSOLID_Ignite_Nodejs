@@ -27,6 +27,7 @@ class UsersRepository implements IUsersRepository {
     })
 
     this.users.push(user)
+    //console.log(this.users)
   }
 
   findById(id: string): User | undefined {
