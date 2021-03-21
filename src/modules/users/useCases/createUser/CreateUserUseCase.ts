@@ -15,14 +15,10 @@ class CreateUserUseCase {
       throw new Error("User already exists")
     }
 
-    this.usersRepository.create({
+    return this.usersRepository.create({
       name,
       email
     })
-
-    const user = this.usersRepository.findByEmail(email)
-
-    return user
   }
 }
 
